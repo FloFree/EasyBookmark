@@ -5,6 +5,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.window.Window;
+import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.PlatformUI;
 
 import bookmark.constant.Constant;
 import bookmark.utils.ValidationUtils;
@@ -21,6 +23,7 @@ public class RenameAction extends BookmarkAction {
 	private void init() {
 		this.setText("Rename");
 		this.setToolTipText("Rename the folder.");
+		this.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_UP));
 	}
 
 	public void run() {

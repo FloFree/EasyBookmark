@@ -27,8 +27,10 @@ import com.google.gson.Gson;
 import bookmark.views.action.AddAllBookmarkAction;
 import bookmark.views.action.AddBookmarkAction;
 import bookmark.views.action.AddFolderAction;
+import bookmark.views.action.CutAction;
 import bookmark.views.action.DeleteAction;
 import bookmark.views.action.DoubleClickAction;
+import bookmark.views.action.PasteAction;
 import bookmark.views.action.RenameAction;
 import bookmark.views.viewer.NameSorter;
 import bookmark.views.viewer.ViewContentProvider;
@@ -58,6 +60,11 @@ public class BookmarkView extends ViewPart {
 	private Action deleteAction;
 	private Action renameAction;
 	private Action doubleClickAction;
+
+	private Action cutAction;
+	private Action pasteAction;
+	private Mark marker;
+
 
 	/**
 	 * The constructor.
@@ -134,6 +141,9 @@ public class BookmarkView extends ViewPart {
 		this.deleteAction = new DeleteAction(viewer);
 		this.renameAction = new RenameAction(viewer);
 		this.doubleClickAction = new DoubleClickAction(viewer);
+		this.marker = new Mark();
+		this.cutAction = new CutAction(viewer, marker);
+		this.pasteAction = new PasteAction(viewer, marker);
 	}
 
 	private void hookContextMenu() {
@@ -151,6 +161,9 @@ public class BookmarkView extends ViewPart {
 						manager.add(deleteAction);
 						manager.add(renameAction);
 						manager.add(addAllBookmarkAction);
+						
+						manager.add(cutAction);
+						manager.add(pasteAction);
 					} else {
 						manager.add(deleteAction);
 					}
@@ -158,6 +171,9 @@ public class BookmarkView extends ViewPart {
 					manager.add(addBookmarkAction);
 					manager.add(addFolderAction);
 					manager.add(addAllBookmarkAction);
+
+					manager.add(cutAction);
+					manager.add(pasteAction);
 				}
 			}
 		});
@@ -188,6 +204,9 @@ public class BookmarkView extends ViewPart {
 		manager.add(this.addBookmarkAction);
 		manager.add(this.addFolderAction);
 		manager.add(this.deleteAction);
+		
+		manager.add(this.cutAction);
+		manager.add(this.pasteAction);
 	}
 
 }
