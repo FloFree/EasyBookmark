@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Bookmark
-Bundle-SymbolicName: bookmark; singleton:=true
+Bundle-SymbolicName: BookmarkEasy;singleton:=true
 Bundle-Version: 1.0.1.qualifier
 Bundle-Activator: bookmark.Activator
 Bundle-Vendor: hanks
