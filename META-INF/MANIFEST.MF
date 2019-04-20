@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Bookmark
+Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: BookmarkEasy;singleton:=true
-Bundle-Version: 1.0.1.qualifier
+Bundle-Version: 1.2
 Bundle-Activator: bookmark.Activator
-Bundle-Vendor: hanks
+Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
