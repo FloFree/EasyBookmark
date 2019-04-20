@@ -31,7 +31,7 @@ this plugin feature one very easy and simple bookmark for navigate your prefered
 ## Install
 To install download and *.jar file in release folder
 
-- https://github.com/FloFree/EasyBookmark/tree/master/release
+- https://github.com/FloFree/EasyBookmark/tree/master/release/plugins
 
 to your eclipse plugin folder, and restart eclipse.
 
