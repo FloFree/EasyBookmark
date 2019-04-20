@@ -6,15 +6,19 @@ Based on the original work
 
 - https://marketplace.eclipse.org/content/easy-bookmark
 
+developed on
+
+- https://github.com/hanks/Bookmark-plugin-for-eclipse
+
 this plugin feature one very easy and simple bookmark for navigate your prefered file source code.
 
-## Demo
+## Demo (v1.0)
 ![alt text][demo]
 
 [demo]: https://raw.githubusercontent.com/FloFree/EasyBookmark/master/resources/demo.gif "demo"
 
 
-## Screenshot
+## Screenshot (v2.0)
 ![alt text][overview]
 
 [overview]: https://raw.githubusercontent.com/FloFree/EasyBookmark/master/resources/overview.png "overview"
