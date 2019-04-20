@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: BookmarkEasy;singleton:=true
-Bundle-Version: 1.2
+Bundle-SymbolicName: easy-bookmark;singleton:=true
+Bundle-Version: 2.1
 Bundle-Activator: bookmark.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
