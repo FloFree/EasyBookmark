@@ -2,7 +2,11 @@ Bookmark-plugin-for-eclipse
 ===========================
 
 ## What
-Based on the original work https://marketplace.eclipse.org/content/easy-bookmark this plugin feature one very easy and simple bookmark for navigate your prefered file source code.
+Based on the original work
+
+- https://marketplace.eclipse.org/content/easy-bookmark
+
+this plugin feature one very easy and simple bookmark for navigate your prefered file source code.
 
 ## Demo
 ![alt text][demo]
@@ -21,7 +25,9 @@ Based on the original work https://marketplace.eclipse.org/content/easy-bookmark
 
 ## Install
 To install download and *.jar file in release folder
-https://github.com/FloFree/EasyBookmark/tree/master/release
+
+- https://github.com/FloFree/EasyBookmark/tree/master/release
+
 to your eclipse plugin folder, and restart eclipse.
 
 Then select from Window->Show View->Other... to search Easy Bookmark
