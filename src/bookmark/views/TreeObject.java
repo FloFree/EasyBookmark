@@ -17,9 +17,10 @@ import bookmark.constant.Constant;
  */
 public class TreeObject implements IAdaptable, Serializable {
 	private static final long serialVersionUID = -4275221961856278045L;
-	private String name;
+
 	private TreeParent parent;
-	protected int flag;
+	private String name;
+	private int flag;
 	private String projectName;
 
 	public TreeObject(String name) {
@@ -40,6 +41,14 @@ public class TreeObject implements IAdaptable, Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getFlag() {
+		return flag;
+	}
+
+	public void setFlag(int flag) {
+		this.flag = flag;
 	}
 
 	public String getProjectName() {

@@ -23,7 +23,7 @@ public class TreeParent extends TreeObject {
 
 	public TreeParent(String name) {
 		super(name);
-		this.flag = Constant.PARENT;
+		this.setFlag(Constant.PARENT);
 		children = new ArrayList<TreeObject>();
 	}
 
@@ -52,8 +52,7 @@ public class TreeParent extends TreeObject {
 	/**
 	 * Add child to specified target node
 	 *
-	 * Use recursion way to add child, if child is leaf, to find his parent and
-	 * add to its parent
+	 * Use recursion way to add child, if child is leaf, to find his parent and add to its parent
 	 *
 	 * @param obj
 	 * @param path
@@ -61,7 +60,7 @@ public class TreeParent extends TreeObject {
 	public boolean addChild(TreeObject target, TreeObject child) {
 		TreeObject[] children = this.getChildren();
 		for (int i = 0; i < children.length; i++) {
-			if (children[i].flag == Constant.PARENT) {
+			if (children[i].getFlag() == Constant.PARENT) {
 				// if target is folder
 				if (target == children[i]) {
 					// insert child
@@ -74,7 +73,7 @@ public class TreeParent extends TreeObject {
 				if (is_ok) {
 					return true;
 				}
-			} else if (children[i].flag == Constant.CHILD) {
+			} else if (children[i].getFlag() == Constant.CHILD) {
 				if (children[i] == target) {
 					TreeParent parent = children[i].getParent();
 					parent.addChild(child);
@@ -94,7 +93,7 @@ public class TreeParent extends TreeObject {
 	public boolean removeSelectedChild(TreeObject target) {
 		TreeObject[] children = this.getChildren();
 		for (int i = 0; i < children.length; i++) {
-			if (children[i].flag == Constant.PARENT) {
+			if (children[i].getFlag() == Constant.PARENT) {
 				// if target is folder
 				if (target == children[i]) {
 					// delete child
@@ -107,7 +106,7 @@ public class TreeParent extends TreeObject {
 				if (is_ok) {
 					return true;
 				}
-			} else if (children[i].flag == Constant.CHILD) {
+			} else if (children[i].getFlag() == Constant.CHILD) {
 				if (children[i] == target) {
 					TreeParent parent = children[i].getParent();
 					parent.removeChild(target);
