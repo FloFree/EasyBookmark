@@ -11,16 +11,17 @@ this plugin feature one very easy and simple bookmark for navigate your prefered
 ## Demo
 ![alt text][demo]
 
-[demo]: https://github.com/FloFree/EasyBookmark/master/resources/demo.gif "demo"
+[demo]: https://raw.githubusercontent.com/FloFree/EasyBookmark/master/resources/demo.gif "demo"
+
 
 ## Screenshot
 ![alt text][overview]
 
-[overview]: https://github.com/FloFree/EasyBookmark/master/resources/overview.png "overview"
+[overview]: https://raw.githubusercontent.com/FloFree/EasyBookmark/master/resources/overview.png "overview"
 
 ![alt text][detail]
 
-[detail]: https://github.com/FloFree/EasyBookmark/master/resources/detail.png "detail"
+[detail]: https://raw.githubusercontent.com/FloFree/EasyBookmark/master/resources/detail.png "detail"
 
 
 ## Install
