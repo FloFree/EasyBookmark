@@ -9,7 +9,7 @@
             id="bookmark">
       </category>
       <view
-            name="Bookmark"
+            name="Easy Bookmark"
             icon="icons/sample.gif"
             category="bookmark"
             class="bookmark.views.BookmarkView"
