@@ -29,7 +29,7 @@ this plugin feature one very easy and simple bookmark for navigate your prefered
 
 
 ## Install
-To install download and *.jar file in release folder
+To install download the last .jar file in release plugins folder
 
 - https://github.com/FloFree/EasyBookmark/tree/master/release/plugins
 
