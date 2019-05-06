@@ -28,8 +28,17 @@ public class TreeParent extends TreeObject {
 	}
 
 	public void addChild(TreeObject child) {
-		children.add(child);
-		child.setParent(this);
+		boolean absent = true;
+		for (TreeObject elem : children) {
+			if (elem.getName().equals(child.getName()) && elem.getProjectName().equals(child.getProjectName())) {
+				absent = false;
+				break;
+			}
+		}
+		if (absent) {
+			children.add(child);
+			child.setParent(this);
+		}
 	}
 
 	public void removeChild(TreeObject child) {
