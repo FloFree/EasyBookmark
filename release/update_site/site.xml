@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="A treeview bookmark plugin update site" url="https://github.com/hanks/Bookmark-plugin-update-site/raw/master/">
-      A treeview bookmark plugin update site
+   <description name="EasyBookmarkUpdateSite">
+      This is the update site for Easy Bookmark plugin &amp; feature.
    </description>
-   <feature url="features/BookmarkFeature_1.0.1.201401272243.jar" id="BookmarkFeature" version="1.0.1.201401272243"/>
+   <feature url="features/EasyBookmarkFeature_2.1.1.201905071541.jar" id="EasyBookmarkFeature" version="2.1.1.201905071541">
+      <category name="EasyBookmark"/>
+   </feature>
+   <category-def name="EasyBookmark" label="EasyBookmark"/>
 </site>
