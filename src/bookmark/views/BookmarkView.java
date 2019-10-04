@@ -24,6 +24,7 @@ import org.osgi.service.prefs.Preferences;
 
 import com.google.gson.Gson;
 
+import bookmark.constant.Constant;
 import bookmark.views.action.AddAllBookmarkAction;
 import bookmark.views.action.AddBookmarkAction;
 import bookmark.views.action.AddFolderAction;
@@ -45,12 +46,6 @@ import bookmark.views.viewer.ViewLabelProvider;
  * <p>
  */
 public class BookmarkView extends ViewPart {
-
-	/**
-	 * The ID of the view as specified by the extension.
-	 */
-	public static final String ID = "bookmark.views.BookmarkView";
-	public static final String DATA_STORE_KEY = "bookmark_datasource";
 
 	private TreeViewer viewer;
 
@@ -103,9 +98,9 @@ public class BookmarkView extends ViewPart {
 	}
 
 	private TreeParent loadPersistantData() {
-		Preferences prefs = InstanceScope.INSTANCE.getNode(ID);
+		Preferences prefs = InstanceScope.INSTANCE.getNode(Constant.ID);
 
-		String json_str = prefs.get(DATA_STORE_KEY, "");
+		String json_str = prefs.get(Constant.DATA_STORE_KEY, "");
 
 		if (json_str == "") {
 			// no data source yet, do initialization
