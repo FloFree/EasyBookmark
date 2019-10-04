@@ -64,7 +64,13 @@ public class TreeObject implements IAdaptable, Serializable {
 	}
 
 	public String toString() {
-		return getName();
+		StringBuffer sb = new StringBuffer();
+		if (!getProjectName().isEmpty()) {
+			sb.append(getProjectName());
+			sb.append(" > ");
+		}
+		sb.append(getName());
+		return sb.toString();
 	}
 
 	/**
