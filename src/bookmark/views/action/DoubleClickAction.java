@@ -1,5 +1,7 @@
 package bookmark.views.action;
 
+import java.io.File;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -15,6 +17,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
+import bookmark.utils.PathController;
 import bookmark.views.TreeObject;
 
 public class DoubleClickAction extends BookmarkAction {
@@ -44,10 +47,17 @@ public class DoubleClickAction extends BookmarkAction {
 				}
 				return;
 			}
-			String relativePath = treeObject.getName();
+			
+			// check system path file 
+			String formalPath = treeObject.getName();
+			String convertedPath = PathController.conversion(formalPath);
+			if (!formalPath.equals(convertedPath)) {
+				treeObject.setName(convertedPath);
+			}
+
 			IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
 			IProject project = workspaceRoot.getProject(treeObject.getProjectName());
-			IFile file1 = project.getFile((new Path(relativePath)));
+			IFile file1 = project.getFile((new Path(convertedPath)));
 			IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 			IWorkbenchPage page = window.getActivePage();
 			IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().getDefaultEditor(file1.getName());
