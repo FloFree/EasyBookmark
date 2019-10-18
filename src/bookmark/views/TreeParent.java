@@ -3,6 +3,7 @@ package bookmark.views;
 import java.util.ArrayList;
 
 import bookmark.constant.Constant;
+import bookmark.utils.PathController;
 
 /*
  * The content provider class is responsible for
@@ -30,7 +31,13 @@ public class TreeParent extends TreeObject {
 	public void addChild(TreeObject child) {
 		boolean absent = true;
 		for (TreeObject elem : children) {
-			if (elem.getName().equals(child.getName()) && elem.getProjectName().equals(child.getProjectName())) {
+			if (
+					(
+							elem.getName().equals(child.getName()) 
+							|| PathController.conversion(elem.getName()).equals(child.getName())
+					)
+					&& elem.getProjectName().equals(child.getProjectName())
+					) {
 				absent = false;
 				break;
 			}
